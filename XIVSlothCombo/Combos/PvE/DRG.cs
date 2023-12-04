@@ -314,8 +314,9 @@ namespace XIVSlothCombo.Combos.PvE
                             if (IsEnabled(CustomComboPreset.DRG_ST_LifeSurge) && ActionReady(LifeSurge) && AnimationLock.CanDRGWeave(LifeSurge) && !HasEffect(Buffs.LifeSurge) &&
                                 ((HasEffect(Buffs.RightEye) && HasEffect(Buffs.LanceCharge) && lastComboMove is VorpalThrust) ||
                                 (HasEffect(Buffs.LanceCharge) && lastComboMove is VorpalThrust) ||
-                                (HasEffect(Buffs.RightEye) && HasEffect(Buffs.LanceCharge) && (HasEffect(Buffs.EnhancedWheelingThrust) || HasEffect(Buffs.SharperFangAndClaw))) ||
-                                (IsOnCooldown(DragonSight) && IsOnCooldown(LanceCharge) && lastComboMove is VorpalThrust)))
+                                 (HasEffect(Buffs.RightEye) && HasEffect(Buffs.LanceCharge) && (HasEffect(Buffs.EnhancedWheelingThrust) || HasEffect(Buffs.SharperFangAndClaw))))
+                          //      (HasEffect(Buffs.RightEye) && HasEffect(Buffs.LanceCharge) && (HasEffect(Buffs.EnhancedWheelingThrust) || HasEffect(Buffs.SharperFangAndClaw))) ||
+                          //      (IsOnCooldown(DragonSight) && IsOnCooldown(LanceCharge) && lastComboMove is VorpalThrust)))
                                 return LifeSurge;
 
                             //Wyrmwind Thrust Feature
