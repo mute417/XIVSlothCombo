@@ -354,7 +354,7 @@ namespace XIVSlothCombo.Combos.PvE
                             //(High) Jump Feature   
                             if (IsEnabled(CustomComboPreset.DRG_ST_HighJump) &&
                           //      ActionReady(OriginalHook(Jump)) && !IsMoving && AnimationLock.CanDRGWeave(OriginalHook(Jump)))
-                                ActionReady(OriginalHook(Jump)))
+                                ActionReady(OriginalHook(Jump)) && AnimationLock.CanDRGWeave(OriginalHook(Jump)))
                                 return OriginalHook(Jump);
 
                             //Geirskogul and Nastrond Feature
@@ -640,7 +640,7 @@ namespace XIVSlothCombo.Combos.PvE
                             //(High) Jump Feature   
                             if (IsEnabled(CustomComboPreset.DRG_AoE_HighJump) &&
                           //      ActionReady(OriginalHook(Jump)) && !IsMoving && AnimationLock.CanDRGWeave(OriginalHook(Jump)))
-                                ActionReady(OriginalHook(Jump)))
+                                ActionReady(OriginalHook(Jump)) && AnimationLock.CanDRGWeave(OriginalHook(Jump)))
                                 return OriginalHook(Jump);
 
                             //Geirskogul and Nastrond Feature
