@@ -418,10 +418,16 @@ namespace XIVSlothCombo.Combos.JobHelpers
 
         internal static readonly List<uint> MidLocks = new()
         {
-            PvE.DRG.Jump,
-            PvE.DRG.HighJump,
+        //    PvE.DRG.Jump,
+        //    PvE.DRG.HighJump,
             PvE.DRG.DragonfireDive,
             PvE.DRG.SpineshatterDive
+        };
+
+        internal static readonly List<uint> NoLocks = new()
+        {
+            PvE.DRG.Jump,
+            PvE.DRG.HighJump
         };
 
         internal static uint SlowLock => PvE.DRG.Stardiver;
@@ -433,6 +439,9 @@ namespace XIVSlothCombo.Combos.JobHelpers
                 return false;
 
             var gcdTimer = CustomComboFunctions.GetCooldownRemainingTime(PvE.DRG.TrueThrust);
+
+            if (NoLocks.Any(x => x == oGCD) && gcdTimer >= 0.2f)
+                return true;
 
             if (FastLocks.Any(x => x == oGCD) && gcdTimer >= 0.6f)
                 return true;
